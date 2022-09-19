@@ -1,10 +1,34 @@
 $b-color:black;
 $dorado:darkgoldenrod;
+$claro:white;
+$g-color:grey;
+
+/*maps*/
+
+$colores: (
+    main:black,
+    titulo:darkgoldenrod,
+    base:grey,
+    texto:white
+);
+
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     
+}
+.head{
+    h1{
+        color: $dorado; 
+        text-align: center;
+        background-color: $b-color;
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    margin-bottom: -10px;
 }
 
 .nav-item {
@@ -28,7 +52,8 @@ $dorado:darkgoldenrod;
 
 /*menu*/
 .menu{
-    color: $dorado;
+
+    color:$dorado;
     text-align: center;
     padding: 20px;
     background-color:$b-color;
@@ -38,7 +63,7 @@ $dorado:darkgoldenrod;
 
 .intro{
     display: flex;
-    color: $dorado;
+    color: map-get($map:$colores, $key:titulo );
     text-align: center;
     background-color: $b-color;    
     align-items: center;
@@ -51,8 +76,8 @@ $dorado:darkgoldenrod;
         align-items: center;
         text-align:justify;
         font-size: 20px;
-        width: 60%;
-        color: white;
+        width: 75%;
+        color:map-get($map:$colores , $key:texto );
     }
     
 }
@@ -65,22 +90,224 @@ $dorado:darkgoldenrod;
 .parrafo{
     display: flex;
     text-align: center;
-    background-color: black;    
+    background-color: $b-color;    
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
-}
-.parrafo {
+    @extend .intro;
     p{
-      padding: 20px;
-      align-items: center;
-      text-align:justify;
-      font-size: 20px;
-      width: 60%;
-      color: white;
+        width: 78%;
+        
     }  
 }
+
 .inspiracion{
+    background-color:map-get($map:$colores , $key:main );
+}
+
+/*Reservas*/
+.contenedor{
+    background-color: $b-color;
+    width: 100%;
+    height: 100vh;
+    color: $dorado;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 180px;
+        font-size: 50px;
+        color: $dorado;
+    }
+    h4{
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      font-size:30px;
+    }
+
+}
+
+.elija{
+    
+    margin-bottom: 40px;
+}
+.comensales{
+    background-color:$dorado;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+.fecha{
+
+    padding: 30px;
+    background-color: $dorado;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vw;
+
+}
+
+@mixin boton {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+.botones{
+    @include boton();
+  input{
+    background-color:$dorado;
+    padding: 10px 20px;
+    color: $b-color;
+    font-weight: 700;
+    border-radius: 10px;
+  }
+  input:hover{
+    background: $g-color;
+    color: $claro;
+  } 
+}
+
+.fechah{
+    
+    margin-top: 30px;
+}
+#pieReserva{
+    margin-top: 250px;
+}
+.reserva{
+    background-color: $b-color;
+}
+
+
+.fechah{
+    
+    margin-top: 30px;
+}
+#pieReserva{
+    margin-top: 250px;
+}
+.reserva{
+    background-color: $b-color;
+}
+/* Contacto */
+.contactos{
+    background-color: $b-color;
+}
+.contacto{
     background-color:$b-color;
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    h1{
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        color: $b-color;
+        text-align: center;
+    }
+    h4{
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: $dorado;
+        text-align: center;
+    }
+}
+
+.mapa{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+}
+.contactenos{
+width: 60%;
+height: 540px;
+background-color:$claro;
+border-radius: 8px;
+box-shadow: 0 0 40px -10px #000;
+padding: 20px 30px;
+box-sizing: border-box;
+font-family: sans-serif;
+position: relative;
+justify-content: center;
+align-items: center;
+margin-top: 10vh;
+h2{
+    margin: 10px 0;
+    padding-bottom: 10px;
+    width: 180px;
+    color: $g-color;
+    border-bottom: 3px solid black;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: sans-serif;
+    transition: all .3s;
+    border-bottom: 3px solid gray;
+}
+input :focus{
+    border-bottom: 2px solid lightblue;
+}
+p:before{
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: $g-color;
+}
+button{
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: sans-serif;
+    border: 2px solid $g-color;
+    background-color: $dorado;
+    border-radius: 8px;
+}
+button:hover{
+    background: $g-color;
+    color: $claro;
+}
+div{
+    position: absolute;
+    bottom: 30px;
+    right: 80px;
+    background: $b-color;
+    color: $claro;
+    width: 350px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000;
+    align-items: center;
+    justify-content: center;
+}
+span{
+    margin: 0 5px 0 15px;
+}
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

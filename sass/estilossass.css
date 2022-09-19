@@ -1,7 +1,19 @@
+/*maps*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.head {
+  margin-bottom: -10px;
+}
+.head h1 {
+  color: darkgoldenrod;
+  text-align: center;
+  background-color: black;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-item a {
@@ -31,7 +43,7 @@
 }
 
 /*inspiracion*/
-.intro {
+.intro, .parrafo {
   display: flex;
   color: darkgoldenrod;
   text-align: center;
@@ -42,11 +54,11 @@
   margin-top: 20px;
 }
 
-.intro p {
+.intro p, .parrafo p {
   align-items: center;
   text-align: justify;
   font-size: 20px;
-  width: 60%;
+  width: 75%;
   color: white;
 }
 
@@ -65,16 +77,217 @@
   justify-content: center;
   flex-direction: column;
 }
-
 .parrafo p {
-  padding: 20px;
-  align-items: center;
-  text-align: justify;
-  font-size: 20px;
-  width: 60%;
-  color: white;
+  width: 78%;
 }
 
 .inspiracion {
   background-color: black;
+}
+
+/*Reservas*/
+.contenedor {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  color: darkgoldenrod;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contenedor h1 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 180px;
+  font-size: 50px;
+  color: darkgoldenrod;
+}
+.contenedor h4 {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.elija {
+  margin-bottom: 40px;
+}
+
+.comensales {
+  background-color: darkgoldenrod;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.fecha {
+  padding: 30px;
+  background-color: darkgoldenrod;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vw;
+}
+
+.botones {
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.botones input {
+  background-color: darkgoldenrod;
+  padding: 10px 20px;
+  color: black;
+  font-weight: 700;
+  border-radius: 10px;
+}
+.botones input:hover {
+  background: grey;
+  color: white;
+}
+
+.fechah {
+  margin-top: 30px;
+}
+
+#pieReserva {
+  margin-top: 250px;
+}
+
+.reserva {
+  background-color: black;
+}
+
+.fechah {
+  margin-top: 30px;
+}
+
+#pieReserva {
+  margin-top: 250px;
+}
+
+.reserva {
+  background-color: black;
+}
+
+/* Contacto */
+.contactos {
+  background-color: black;
+}
+
+.contacto {
+  background-color: black;
+  width: 100%;
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+}
+.contacto h1 {
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: black;
+  text-align: center;
+}
+.contacto h4 {
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: darkgoldenrod;
+  text-align: center;
+}
+
+.mapa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactenos {
+  width: 60%;
+  height: 540px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+}
+.contactenos h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 180px;
+  color: grey;
+  border-bottom: 3px solid black;
+}
+.contactenos input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family: sans-serif;
+  transition: all 0.3s;
+  border-bottom: 3px solid gray;
+}
+.contactenos input :focus {
+  border-bottom: 2px solid lightblue;
+}
+.contactenos p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: grey;
+}
+.contactenos button {
+  float: right;
+  padding: 8px 12px;
+  margin: 8px 0 0;
+  font-family: sans-serif;
+  border: 2px solid grey;
+  background-color: darkgoldenrod;
+  border-radius: 8px;
+}
+.contactenos button:hover {
+  background: grey;
+  color: white;
+}
+.contactenos div {
+  position: absolute;
+  bottom: 30px;
+  right: 80px;
+  background: black;
+  color: white;
+  width: 350px;
+  padding: 16px 4px 16px 0;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 10px 10px 40px -14px #000;
+  align-items: center;
+  justify-content: center;
+}
+.contactenos span {
+  margin: 0 5px 0 15px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=estilossass.css.map */
